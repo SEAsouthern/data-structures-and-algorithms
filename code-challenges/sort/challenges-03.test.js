@@ -7,7 +7,7 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => {return a <b;});
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +21,14 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+  arr.sort ( (a, b) => {
+    if( a <b ) {
+      return 1;
+    } else if (a > b) {
+      return -1;
+    }
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,8 +114,10 @@ If two people share the same last name, alphabetize on their first name.
 If two people have the same full name, the younger one should come first. Do not worry about capitalization.
 ------------------------------------------------------------------------------------------------ */
 
-const sortPeopleBetter = (arr) => {
-  // Solution code here...
+const sortPeopleBetter = (arr) => arr.sort((a,b) => {
+  return a.lastName > b.lastName ? 1
+    :a.lastName < b.lastName ? -1
+    
 };
 
 /* ------------------------------------------------------------------------------------------------
