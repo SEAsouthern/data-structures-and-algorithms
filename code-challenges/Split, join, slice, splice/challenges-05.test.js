@@ -23,6 +23,7 @@ const howMuchPencil = (str) => {
 
   // for (let i =0; i > str.length; i++) {
   //   str.slice(i, str.length) = str;
+  //   i--;
   //   result.push(str)
   // }
   // result.push("");
