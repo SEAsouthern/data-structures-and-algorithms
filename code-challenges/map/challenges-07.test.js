@@ -50,9 +50,8 @@ Read the MDN documentation on String.charCodeAt() if necessary.
 For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
-const charCode = (arr) => {
-  // Solution code here...
-};
+const charCode = (arr) => arr.map(el => String.charCodeAt(el));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
