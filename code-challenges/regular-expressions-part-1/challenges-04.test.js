@@ -13,7 +13,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let regex = /[0-9]/g;
+  return regex.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +26,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let regex = /[A-Z][A-Za-z]*/g;
+  return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,7 +37,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let regex = /^[A-J]\w*/g;
+  let cities = [];
+  for (let i = 0; i <arr.length; i++) {
+    if (regex.test(arr[i])) {
+      cities.push(arr[i]);
+    }
+  }
+  return cities;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,7 +60,8 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  [Oo]ct(ober)?\b
+  let regex = /\b[Oo]ct(ober)?/g;
+  return regex.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,7 +75,8 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  let regex = /[a-z]+\s/g;
+  return str.match(regex)
 };
 
 /* ------------------------------------------------------------------------------------------------
